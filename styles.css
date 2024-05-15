@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9ca4ec, #c8f0dc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+}
+
+button#add-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#add-button:hover {
+    background-color: #45a049;
+}
+
+.filter button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.filter button:hover {
+    background-color: #007BB5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px; /* Set a max-height for the ul */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li:hover {
+    background-color: #e4e4e4;
+}
+
+button.delete {
+    background-color: #ff0000;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #cc0000;
+}
+
+.task-text {
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        margin: 3px;
+    }
+
+    ul {
+        max-height: 300px; /* Adjust max-height for smaller screens */
+    }
+}
